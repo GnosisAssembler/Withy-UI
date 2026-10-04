@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sprig
 
-## Getting Started
+Sprig is a Next.js design system for dashboards, apps, and pages. Color, type, density, and screen structure are built with Radix primitives and Tailwind.
 
-First, run the development server:
+## Layers
+
+| Layer     | Folder                     | Use it for                                        |
+| --------- | -------------------------- | ------------------------------------------------- |
+| Atoms     | `src/components/atoms`     | Button, badge, input, avatar, sparkline, progress |
+| Molecules | `src/components/molecules` | Form field, stat, search, tabs, menu, meter list  |
+| Organisms | `src/components/organisms` | Card, header, sidebar, table, dialog, page header |
+| Templates | `src/components/templates` | A full dashboard, app, or page                    |
+
+Import the public set from `@/components`.
+
+## Examples
+
+- `/` foundations: palette, type, and a live atom board
+- `/examples/components` pickers, overlays, loaders, timeline, data table, command bar, code, and icons
+- `/examples/charts` area, bar, heatmap, and mixed charts
+- `/examples/widgets` map, score, acquisition, complaints, and tickets
+- `/examples/calendar` month calendar
+- `/examples/settings` profile and workspace settings
+- `/signin` sign-in page
+- `/signup` sign-up page
+
+Storybook shows the same pieces one layer at a time, including full template recipes.
+
+## Skins
+
+Light and dark. The header skin menu stores the choice in `localStorage`.
+
+Fonts are IBM Plex Sans for interface text, Rubik for metrics, and Inter for eyebrows, badges, and breadcrumbs.
+
+## Scripts
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
 pnpm dev
-# or
-bun dev
+pnpm storybook
+pnpm test
+pnpm lint
+pnpm format
+pnpm typecheck
+pnpm commit
+pnpm changeset
+pnpm version
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+`pnpm commit` opens Commitizen. `pnpm changeset` records a version change, and `pnpm version` applies it. Husky runs lint-staged before a commit and Commitlint on the message.
