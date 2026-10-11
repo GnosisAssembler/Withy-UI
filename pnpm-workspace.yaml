@@ -1,3 +1,15 @@
+packages:
+  - "apps/*"
+  - "packages/*"
+
+auditConfig:
+  ignoreGhsas:
+    # Unfixed ReDoS in commitizen's dependency tree. It is a local commit CLI, not a published dependency.
+    - GHSA-vfj7-8cjw-p6xm
+
+onlyBuiltDependencies:
+  - esbuild
+
 ignoredBuiltDependencies:
   - sharp
   - unrs-resolver

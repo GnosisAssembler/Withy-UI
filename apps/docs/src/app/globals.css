@@ -1,0 +1,4 @@
+@import "tailwindcss";
+@import "sprig-design-system/fonts.css";
+@import "sprig-design-system/styles.css";
+@source "../../../../packages/sprig-design-system/dist";

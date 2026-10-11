@@ -7,6 +7,17 @@ const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
   eslintConfigPrettier,
+  {
+    rules: {
+      "@next/next/no-html-link-for-pages": ["error", "apps/docs/src/app"],
+    },
+  },
+  {
+    files: ["packages/**/*.{js,jsx,ts,tsx}"],
+    rules: {
+      "@next/next/no-html-link-for-pages": "off",
+    },
+  },
   globalIgnores([
     ".next/**",
     "out/**",
@@ -14,6 +25,8 @@ const eslintConfig = defineConfig([
     "coverage/**",
     "storybook-static/**",
     "next-env.d.ts",
+    "**/dist/**",
+    "apps/docs/.next/**",
   ]),
 ]);
 
