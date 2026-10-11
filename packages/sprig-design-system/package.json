@@ -36,8 +36,7 @@
     "./fonts.css": "./dist/fonts.css"
   },
   "publishConfig": {
-    "access": "public",
-    "provenance": true
+    "access": "public"
   },
   "scripts": {
     "build": "tsup",
