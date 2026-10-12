@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { FoundationsTemplate } from "sprig-design-system/examples";
+import { HomeTemplate } from "withy-ui/examples";
 
 export const metadata: Metadata = {
-  title: "Foundations",
+  title: "Home",
 };
 
 export default function HomePage() {
-  return <FoundationsTemplate />;
+  return <HomeTemplate />;
 }

@@ -1,4 +1,4 @@
 @import "tailwindcss";
-@import "sprig-design-system/fonts.css";
-@import "sprig-design-system/styles.css";
-@source "../../../../packages/sprig-design-system/dist";
+@import "withy-ui/fonts.css";
+@import "withy-ui/styles.css";
+@source "../../../../packages/withy-ui/dist";

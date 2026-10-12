@@ -1,0 +1,1218 @@
+:root,
+[data-theme="light"] {
+  --background: #f3f0f6;
+  --foreground: #1c1428;
+  --card: #ffffff;
+  --card-foreground: #3a3148;
+  --muted: #ebe6f1;
+  --muted-foreground: #6e657c;
+  --border: #3a284829;
+  --header: #ffffff;
+  --primary: #0e7484;
+  --primary-foreground: #ffffff;
+  --secondary: #e6e0f0;
+  --secondary-foreground: #301a4b;
+  --success: #0e7a58;
+  --success-foreground: #ffffff;
+  --info: #3a6a8c;
+  --info-foreground: #ffffff;
+  --warning: #b85e0c;
+  --warning-foreground: #ffffff;
+  --danger: #c41e36;
+  --danger-foreground: #ffffff;
+  --light: #e4deec;
+  --dark: #352c42;
+  --text: #1c1428;
+  --text-2: #3a3148;
+  --text-3: #6e657c;
+  --text-4: #c4bdd0;
+  --heading: #1c1428;
+  --white-button: #ffffff;
+  --white-button-foreground: #3a3148;
+  --gray-50: #f7f5f9;
+  --gray-100: #ebe6f1;
+  --gray-200: #ddd6e6;
+  --gray-300: #c4bdd0;
+  --gray-400: #a398b0;
+  --gray-500: #6e657c;
+  --gray-600: #5c5468;
+  --gray-700: #463e52;
+  --gray-800: #352c42;
+  --gray-900: #1e1828;
+  --whisper: #f3f0f6;
+  --pink: #fe5d9f;
+  --orange: #f5d6ba;
+  --indigo: #6b5ca5;
+  --teal: #8affc1;
+  --cyan: #48acf0;
+  --brand: #301a4b;
+  --facebook: #4064ac;
+  --twitter: #00a7e6;
+  --visa: #1a1f71;
+  --mastercard: #eb001b;
+  --mastercard-accent: #f79e1b;
+  --amex: #2e77bc;
+  --discover: #ff6000;
+  --diners: #0079be;
+  --jcb: #0e4c96;
+  --unionpay: #e21836;
+  --elevation: 0 0 10px rgb(28 20 40 / 0.06);
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --background: #121018;
+  --foreground: #f4f0f8;
+  --card: #1c1828;
+  --card-foreground: #d8d0e2;
+  --muted: #2a2436;
+  --muted-foreground: #a79fb4;
+  --border: #c4b4dc33;
+  --header: #1c1828;
+  --primary: #5ed4e2;
+  --primary-foreground: #1c1428;
+  --secondary: #564c6c;
+  --secondary-foreground: #f4f0f8;
+  --success: #3ddba6;
+  --success-foreground: #1c1428;
+  --info: #8ebfdc;
+  --info-foreground: #1c1428;
+  --warning: #f0a44a;
+  --warning-foreground: #1c1428;
+  --danger: #ff6b78;
+  --danger-foreground: #1c1428;
+  --dark: #4e465c;
+  --text: #f4f0f8;
+  --text-2: #d8d0e2;
+  --text-3: #a79fb4;
+  --text-4: #6a6278;
+  --heading: #f4f0f8;
+  --white-button: #2a2436;
+  --white-button-foreground: #f4f0f8;
+  --gray-50: #262230;
+  --gray-100: #2a2436;
+  --gray-200: #3a3348;
+  --gray-300: #4e465c;
+  --gray-400: #6a6278;
+  --gray-500: #a79fb4;
+  --brand: #6a3c98;
+  --elevation: 0 0 0 0 transparent;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --font-sans: var(--font-plex), "IBM Plex Sans", sans-serif;
+  --font-rubik: var(--font-rubik-family), Rubik, sans-serif;
+  --font-inter: var(--font-inter-family), Inter, sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-header: var(--header);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-danger: var(--danger);
+  --color-danger-foreground: var(--danger-foreground);
+  --color-light: var(--light);
+  --color-dark: var(--dark);
+  --color-text: var(--text);
+  --color-text-2: var(--text-2);
+  --color-text-3: var(--text-3);
+  --color-text-4: var(--text-4);
+  --color-heading: var(--heading);
+  --color-white-button: var(--white-button);
+  --color-white-button-foreground: var(--white-button-foreground);
+  --color-gray-50: var(--gray-50);
+  --color-gray-100: var(--gray-100);
+  --color-gray-200: var(--gray-200);
+  --color-gray-300: var(--gray-300);
+  --color-gray-400: var(--gray-400);
+  --color-gray-500: var(--gray-500);
+  --color-gray-600: var(--gray-600);
+  --color-gray-700: var(--gray-700);
+  --color-gray-800: var(--gray-800);
+  --color-gray-900: var(--gray-900);
+  --color-whisper: var(--whisper);
+  --color-pink: var(--pink);
+  --color-orange: var(--orange);
+  --color-indigo: var(--indigo);
+  --color-teal: var(--teal);
+  --color-cyan: var(--cyan);
+  --color-brand: var(--brand);
+  --color-facebook: var(--facebook);
+  --color-twitter: var(--twitter);
+  --color-visa: var(--visa);
+  --color-mastercard: var(--mastercard);
+  --color-mastercard-accent: var(--mastercard-accent);
+  --color-amex: var(--amex);
+  --color-discover: var(--discover);
+  --color-diners: var(--diners);
+  --color-jcb: var(--jcb);
+  --color-unionpay: var(--unionpay);
+  --shadow-elevation: var(--elevation);
+  --radius-xs: 3px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  html,
+  body {
+    min-height: 100%;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--text);
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--heading);
+    font-weight: 500;
+    line-height: 1.25;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+}
+
+@keyframes withy-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes withy-drawer-in-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes withy-drawer-in-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.withy-overlay,
+.withy-dialog {
+  animation: withy-fade-in 160ms ease-out both;
+}
+
+.withy-drawer-left {
+  animation: withy-drawer-in-left 180ms ease-out both;
+}
+
+.withy-drawer-right {
+  animation: withy-drawer-in-right 180ms ease-out both;
+}
+
+@keyframes withy-accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes withy-accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+.withy-accordion-content[data-state="open"] {
+  animation: withy-accordion-down 180ms ease-out;
+}
+
+.withy-accordion-content[data-state="closed"] {
+  animation: withy-accordion-up 180ms ease-out;
+}
+
+@keyframes withy-otp-caret {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.withy-otp-caret {
+  animation: withy-otp-caret 1.05s steps(1, end) infinite;
+}
+
+/* The code input sits over the slots. The glyphs stay invisible so paste,
+   selection, and one-time-code autofill still use a real text field. */
+.withy-otp-input {
+  -webkit-text-fill-color: transparent;
+}
+
+.withy-otp-input::selection {
+  background: transparent;
+  color: transparent;
+}
+
+.withy-otp-input:-webkit-autofill,
+.withy-otp-input:-webkit-autofill:hover,
+.withy-otp-input:-webkit-autofill:focus {
+  -webkit-text-fill-color: transparent;
+  caret-color: transparent;
+  transition: background-color 9999s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .withy-overlay,
+  .withy-dialog,
+  .withy-drawer-left,
+  .withy-drawer-right,
+  .withy-accordion-content[data-state="open"],
+  .withy-accordion-content[data-state="closed"],
+  .withy-otp-caret {
+    animation: none;
+  }
+}
+
+@property --withy-aura-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes withy-aura-spin {
+  to {
+    --withy-aura-angle: 360deg;
+    transform: translateZ(1px);
+  }
+}
+
+@keyframes withy-aura-glow {
+  20%,
+  80% {
+    opacity: 0.7;
+    filter: blur(0.25rem);
+  }
+  50% {
+    opacity: 1;
+    filter: blur(0.75rem);
+  }
+}
+
+@keyframes withy-aura-glow-outer {
+  20%,
+  80% {
+    opacity: 0.3;
+    filter: blur(1rem);
+  }
+  50% {
+    opacity: 0.6;
+    filter: blur(1.5rem);
+  }
+}
+
+@keyframes withy-progress-indeterminate {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(250%);
+  }
+}
+
+@keyframes withy-progress-stripes {
+  from {
+    background-position: 0.5rem 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+@keyframes withy-progress-shimmer {
+  from {
+    transform: translateX(-120%);
+  }
+  to {
+    transform: translateX(120%);
+  }
+}
+
+/* The wraith moves on its pixel grid: each keyframe holds until the next one. */
+@keyframes withy-wraith-float {
+  0%,
+  87.5% {
+    transform: translateY(0);
+  }
+  12.5%,
+  75% {
+    transform: translateY(calc(var(--withy-wraith-px) * -1));
+  }
+  25%,
+  62.5% {
+    transform: translateY(calc(var(--withy-wraith-px) * -2));
+  }
+  37.5%,
+  50% {
+    transform: translateY(calc(var(--withy-wraith-px) * -3));
+  }
+}
+
+@keyframes withy-wraith-shadow {
+  0%,
+  87.5% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+  12.5%,
+  75% {
+    opacity: 0.85;
+    transform: scaleX(0.93);
+  }
+  25%,
+  62.5% {
+    opacity: 0.7;
+    transform: scaleX(0.86);
+  }
+  37.5%,
+  50% {
+    opacity: 0.6;
+    transform: scaleX(0.79);
+  }
+}
+
+@keyframes withy-wraith-sway-rest {
+  0%,
+  50% {
+    visibility: visible;
+  }
+  25%,
+  75% {
+    visibility: hidden;
+  }
+}
+
+@keyframes withy-wraith-sway-right {
+  0%,
+  50% {
+    visibility: hidden;
+  }
+  25% {
+    visibility: visible;
+  }
+}
+
+@keyframes withy-wraith-sway-left {
+  0% {
+    visibility: hidden;
+  }
+  75% {
+    visibility: visible;
+  }
+}
+
+@keyframes withy-wraith-flame-steady {
+  0% {
+    visibility: visible;
+  }
+  45% {
+    visibility: hidden;
+  }
+}
+
+@keyframes withy-wraith-flame-dim {
+  0%,
+  70% {
+    visibility: hidden;
+  }
+  45% {
+    visibility: visible;
+  }
+}
+
+@keyframes withy-wraith-flame-lean {
+  0% {
+    visibility: hidden;
+  }
+  70% {
+    visibility: visible;
+  }
+}
+
+@keyframes withy-wraith-flicker {
+  0% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 0.88;
+  }
+}
+
+@keyframes withy-wraith-eyes-open {
+  0%,
+  96% {
+    visibility: visible;
+  }
+  93% {
+    visibility: hidden;
+  }
+}
+
+@keyframes withy-wraith-eyes-shut {
+  0%,
+  96% {
+    visibility: hidden;
+  }
+  93% {
+    visibility: visible;
+  }
+}
+
+@keyframes withy-wraith-breathe {
+  0%,
+  100% {
+    opacity: 0.65;
+    transform: scale(0.94);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+}
+
+@keyframes withy-wraith-rise {
+  to {
+    transform: translate(
+      calc(var(--withy-wraith-drift) * var(--withy-wraith-px)),
+      calc(var(--withy-wraith-travel) * var(--withy-wraith-px) * -1)
+    );
+  }
+}
+
+@keyframes withy-wraith-fall {
+  to {
+    transform: translateY(calc(var(--withy-wraith-travel) * var(--withy-wraith-px)));
+  }
+}
+
+@keyframes withy-wraith-fade {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  20%,
+  70% {
+    opacity: 1;
+  }
+}
+
+@keyframes withy-wraith-twinkle {
+  0%,
+  94% {
+    opacity: 0;
+  }
+  76%,
+  88% {
+    opacity: 0.5;
+  }
+  82% {
+    opacity: 1;
+  }
+}
+
+@keyframes withy-wraith-twinkle-arms {
+  0%,
+  88% {
+    opacity: 0;
+  }
+  82% {
+    opacity: 1;
+  }
+}
+
+@layer components {
+  /* First image shows by default. Later images form invisible columns; hover reveals them. */
+  .withy-hover-gallery {
+    --withy-hover-gallery-items: 1;
+    display: inline-grid;
+    width: 100%;
+    grid-template-columns: repeat(var(--withy-hover-gallery-items), 1fr);
+    gap: 1px;
+    overflow: hidden;
+  }
+
+  .withy-hover-gallery:has(> :nth-child(3)) {
+    --withy-hover-gallery-items: 2;
+  }
+
+  .withy-hover-gallery:has(> :nth-child(4)) {
+    --withy-hover-gallery-items: 3;
+  }
+
+  .withy-hover-gallery:has(> :nth-child(5)) {
+    --withy-hover-gallery-items: 4;
+  }
+
+  .withy-hover-gallery:has(> :nth-child(6)) {
+    --withy-hover-gallery-items: 5;
+  }
+
+  .withy-hover-gallery:has(> :nth-child(7)) {
+    --withy-hover-gallery-items: 6;
+  }
+
+  .withy-hover-gallery:has(> :nth-child(8)) {
+    --withy-hover-gallery-items: 7;
+  }
+
+  .withy-hover-gallery:has(> :nth-child(9)) {
+    --withy-hover-gallery-items: 8;
+  }
+
+  .withy-hover-gallery:has(> :nth-child(10)) {
+    --withy-hover-gallery-items: 9;
+  }
+
+  .withy-hover-gallery > * {
+    grid-row: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+  }
+
+  .withy-hover-gallery > :nth-child(1) {
+    grid-column: 1 / -1;
+    opacity: 1;
+  }
+
+  .withy-hover-gallery > :nth-child(2) {
+    grid-column: 1;
+  }
+
+  .withy-hover-gallery > :nth-child(3) {
+    grid-column: 2;
+  }
+
+  .withy-hover-gallery > :nth-child(4) {
+    grid-column: 3;
+  }
+
+  .withy-hover-gallery > :nth-child(5) {
+    grid-column: 4;
+  }
+
+  .withy-hover-gallery > :nth-child(6) {
+    grid-column: 5;
+  }
+
+  .withy-hover-gallery > :nth-child(7) {
+    grid-column: 6;
+  }
+
+  .withy-hover-gallery > :nth-child(8) {
+    grid-column: 7;
+  }
+
+  .withy-hover-gallery > :nth-child(9) {
+    grid-column: 8;
+  }
+
+  .withy-hover-gallery > :nth-child(10) {
+    grid-column: 9;
+  }
+
+  .withy-hover-gallery > *:hover {
+    grid-column: 1 / -1;
+    opacity: 1;
+  }
+
+  .withy-hover-gallery:has(*:hover) > :nth-child(1) {
+    display: none;
+  }
+
+  .withy-code {
+    background: color-mix(in srgb, var(--primary) 14%, var(--muted));
+    color: var(--primary);
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--primary) 28%, transparent);
+    font-variant-ligatures: none;
+  }
+
+  .withy-terminal {
+    --code-fg: #f4f0f8;
+    --code-comment: #a79fb4;
+    --code-keyword: #5ed4e2;
+    --code-string: #8affc1;
+    --code-number: #f0a44a;
+    --code-tag: #fe5d9f;
+    --code-attr: #f5d6ba;
+    --code-function: #7ecaf8;
+    --code-punctuation: #c4b8d4;
+    background: #1a0f28;
+    color: var(--code-fg);
+    box-shadow:
+      inset 0 0 0 1px rgb(94 212 226 / 0.32),
+      0 10px 28px rgb(28 20 40 / 0.14);
+    font-variant-ligatures: none;
+  }
+
+  .withy-terminal-bar {
+    border-bottom: 1px solid rgb(244 240 248 / 0.08);
+  }
+
+  .withy-terminal-screen {
+    background: radial-gradient(120% 80% at 0% 0%, rgb(94 212 226 / 0.1), transparent 42%), #241433;
+    color: var(--code-fg);
+    tab-size: 2;
+  }
+
+  .withy-terminal-dot {
+    width: 0.4375rem;
+    height: 0.4375rem;
+    flex-shrink: 0;
+    border-radius: 999px;
+    background: #3ddba6;
+    box-shadow: 0 0 8px rgb(61 219 166 / 0.85);
+  }
+
+  .withy-terminal-label {
+    color: var(--code-punctuation);
+  }
+
+  .withy-terminal-copy {
+    border-radius: 3px;
+    color: var(--code-comment);
+  }
+
+  .withy-terminal-copy:hover {
+    background: rgb(244 240 248 / 0.06);
+    color: var(--code-fg);
+  }
+
+  .withy-terminal-copy:focus-visible {
+    outline: 2px solid var(--code-keyword);
+    outline-offset: 1px;
+  }
+
+  .withy-terminal-copy.is-copied {
+    color: var(--code-string);
+  }
+
+  .withy-terminal .withy-tok-comment {
+    color: var(--code-comment);
+    font-style: italic;
+  }
+
+  .withy-terminal .withy-tok-keyword {
+    color: var(--code-keyword);
+  }
+
+  .withy-terminal .withy-tok-string {
+    color: var(--code-string);
+  }
+
+  .withy-terminal .withy-tok-number {
+    color: var(--code-number);
+  }
+
+  .withy-terminal .withy-tok-tag {
+    color: var(--code-tag);
+  }
+
+  .withy-terminal .withy-tok-attr {
+    color: var(--code-attr);
+  }
+
+  .withy-terminal .withy-tok-function {
+    color: var(--code-function);
+  }
+
+  .withy-terminal .withy-tok-punctuation {
+    color: var(--code-punctuation);
+  }
+
+  .withy-terminal ::selection {
+    background: rgb(94 212 226 / 0.28);
+    color: var(--code-fg);
+  }
+
+  .withy-aura {
+    --withy-aura-padding: 0.125rem;
+    --withy-aura-duration: 6s;
+    --withy-aura-radius: 4px;
+    --withy-aura-image: conic-gradient(
+      from var(--withy-aura-angle),
+      transparent 225deg,
+      currentColor
+    );
+    position: relative;
+    isolation: isolate;
+    display: inline-flex;
+    vertical-align: middle;
+    max-width: 100%;
+    padding: var(--withy-aura-padding);
+    border-radius: calc(var(--withy-aura-padding) + var(--withy-aura-radius));
+    background-image: var(--withy-aura-image);
+    animation: withy-aura-spin var(--withy-aura-duration) linear infinite;
+  }
+
+  .withy-aura::before,
+  .withy-aura::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0.7;
+    filter: blur(0.25rem);
+    background-color: inherit;
+    background-image: var(--withy-aura-image);
+    animation: inherit;
+  }
+
+  .withy-aura::after {
+    opacity: 0.3;
+    filter: blur(1rem);
+  }
+
+  .withy-aura-dual {
+    --withy-aura-image: repeating-conic-gradient(
+      from var(--withy-aura-angle),
+      transparent 0%,
+      transparent 40%,
+      currentColor 50%
+    );
+  }
+
+  .withy-aura-rainbow {
+    --withy-aura-image: conic-gradient(
+      from var(--withy-aura-angle) in oklch longer hue,
+      transparent 10%,
+      oklch(80% 0.15 0deg),
+      oklch(80% 0.15 360deg),
+      transparent 90%
+    );
+  }
+
+  .withy-aura-holo {
+    --withy-aura-duration: 20s;
+    --withy-aura-image: repeating-conic-gradient(
+      from var(--withy-aura-angle),
+      oklch(0.82 0.17 327),
+      oklch(0.75 0.12 274),
+      oklch(0.82 0.11 191),
+      oklch(0.91 0.11 105),
+      oklch(0.88 0.08 68),
+      oklch(0.82 0.17 327) 10%
+    );
+  }
+
+  .withy-aura-gold {
+    --withy-aura-image: repeating-conic-gradient(
+      from var(--withy-aura-angle),
+      oklch(0.6598 0.1863 72.37),
+      oklch(0.9635 0.0768 102.94),
+      oklch(0.7157 0.1691 82.23),
+      oklch(0.9602 0.0792 103.13),
+      oklch(0.6066 0.1181 76.17),
+      oklch(0.6598 0.1863 72.37) 50%
+    );
+  }
+
+  .withy-aura-silver {
+    --withy-aura-image: repeating-conic-gradient(
+      from var(--withy-aura-angle),
+      oklch(0.3 0 0),
+      oklch(0.9 0 0),
+      oklch(0.6 0 0),
+      oklch(0.9 0 0),
+      oklch(0.5 0 0),
+      oklch(0.3 0 0) 50%
+    );
+  }
+
+  .withy-aura-glow {
+    animation: none;
+    --withy-aura-image: radial-gradient(closest-corner at center, currentColor 0%, transparent 90%);
+  }
+
+  .withy-aura-glow::before {
+    animation: withy-aura-glow var(--withy-aura-duration) ease-out infinite;
+  }
+
+  .withy-aura-glow::after {
+    animation: withy-aura-glow-outer var(--withy-aura-duration) ease-out infinite;
+  }
+
+  .withy-aura-xs {
+    --withy-aura-padding: 0rem;
+  }
+
+  .withy-aura-sm {
+    --withy-aura-padding: 0.0625rem;
+  }
+
+  .withy-aura-md {
+    --withy-aura-padding: 0.125rem;
+  }
+
+  .withy-aura-lg {
+    --withy-aura-padding: 0.15625rem;
+  }
+
+  .withy-aura-xl {
+    --withy-aura-padding: 0.25rem;
+  }
+
+  .withy-progress-fill {
+    transition-property: width, background-color;
+    transition-duration: var(--withy-progress-duration, 150ms);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .withy-progress-indeterminate {
+    width: 40%;
+    animation: withy-progress-indeterminate var(--withy-progress-duration, 1.4s) linear infinite;
+  }
+
+  .withy-progress-stripes {
+    background-image: linear-gradient(
+      45deg,
+      color-mix(in srgb, var(--background) 42%, transparent) 25%,
+      transparent 25%,
+      transparent 50%,
+      color-mix(in srgb, var(--background) 42%, transparent) 50%,
+      color-mix(in srgb, var(--background) 42%, transparent) 75%,
+      transparent 75%,
+      transparent
+    );
+    background-size: 0.5rem 0.5rem;
+    animation: withy-progress-stripes var(--withy-progress-duration, 0.8s) linear infinite;
+  }
+
+  .withy-progress-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .withy-progress-shimmer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      100deg,
+      transparent 15%,
+      color-mix(in srgb, var(--background) 70%, transparent) 50%,
+      transparent 85%
+    );
+    animation: withy-progress-shimmer var(--withy-progress-duration, 1.6s) ease-in-out infinite;
+  }
+
+  /* Sizes are in sprite pixels: a 52 by 64 stage around a 32 by 48 figure. */
+  .withy-wraith {
+    --withy-wraith-px: 3px;
+    --withy-wraith-ink: var(--gray-900);
+    --withy-wraith-void: #0d0914;
+    --withy-wraith-gaze: #14394a;
+    --withy-wraith-shade: #2a1842;
+    --withy-wraith-robe: #432a66;
+    --withy-wraith-fold: var(--indigo);
+    --withy-wraith-spill: #3a6a8c;
+    --withy-wraith-rim: #3f9fb0;
+    --withy-wraith-eye: var(--teal);
+    --withy-wraith-bone: #e4deec;
+    --withy-wraith-bone-dim: #a398b0;
+    --withy-wraith-iron: var(--gray-800);
+    --withy-wraith-iron-lit: #6e657c;
+    --withy-wraith-flame: #eafff5;
+    --withy-wraith-flame-glow: var(--teal);
+    --withy-wraith-flame-edge: #5ed4e2;
+    --withy-wraith-halo: var(--primary);
+    --withy-wraith-lamp: var(--primary);
+    --withy-wraith-spark: var(--primary);
+    --withy-wraith-spark-alt: var(--indigo);
+    --withy-wraith-rain: var(--primary);
+    --withy-wraith-ember: var(--indigo);
+    --withy-wraith-shadow: color-mix(in srgb, var(--brand) 22%, transparent);
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+    width: calc(var(--withy-wraith-px) * 52);
+    height: calc(var(--withy-wraith-px) * 64);
+    isolation: isolate;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  [data-theme="dark"] .withy-wraith {
+    --withy-wraith-spill: #4f8fb3;
+    --withy-wraith-rim: #5ed4e2;
+    --withy-wraith-lamp: var(--teal);
+    --withy-wraith-spark: var(--teal);
+    --withy-wraith-spark-alt: var(--primary);
+  }
+
+  .withy-wraith-sm {
+    --withy-wraith-px: 2px;
+  }
+
+  .withy-wraith-md {
+    --withy-wraith-px: 3px;
+  }
+
+  .withy-wraith-lg {
+    --withy-wraith-px: 4px;
+  }
+
+  .withy-wraith-aura {
+    position: absolute;
+    left: calc(var(--withy-wraith-px) * 4);
+    top: calc(var(--withy-wraith-px) * 6);
+    width: calc(var(--withy-wraith-px) * 48);
+    height: calc(var(--withy-wraith-px) * 48);
+    border-radius: 9999px;
+    background: radial-gradient(
+      closest-side,
+      color-mix(in oklab, var(--withy-wraith-halo) 30%, transparent),
+      color-mix(in oklab, var(--withy-wraith-halo) 10%, transparent) 60%,
+      transparent
+    );
+    animation: withy-wraith-breathe 4.8s ease-in-out infinite;
+  }
+
+  .withy-wraith-shadow {
+    position: absolute;
+    left: calc(var(--withy-wraith-px) * 25);
+    top: calc(var(--withy-wraith-px) * 57);
+    width: calc(var(--withy-wraith-px) * 14);
+    height: calc(var(--withy-wraith-px) * 3);
+    shape-rendering: crispEdges;
+    animation: withy-wraith-shadow 3.2s step-end infinite;
+  }
+
+  .withy-wraith-figure {
+    position: absolute;
+    left: calc(var(--withy-wraith-px) * 12);
+    top: calc(var(--withy-wraith-px) * 6);
+    width: calc(var(--withy-wraith-px) * 32);
+    height: calc(var(--withy-wraith-px) * 48);
+    animation: withy-wraith-float 3.2s step-end infinite;
+  }
+
+  .withy-wraith-sprite {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    shape-rendering: crispEdges;
+  }
+
+  .withy-wraith-glow {
+    position: absolute;
+    left: calc(var(--withy-wraith-px) * -5.5);
+    top: calc(var(--withy-wraith-px) * 25);
+    width: calc(var(--withy-wraith-px) * 18);
+    height: calc(var(--withy-wraith-px) * 18);
+    border-radius: 9999px;
+    background: radial-gradient(
+      closest-side,
+      color-mix(in oklab, var(--withy-wraith-lamp) 55%, transparent),
+      transparent
+    );
+    animation: withy-wraith-flicker 0.9s step-end infinite;
+  }
+
+  .withy-wraith-sway > :not(:first-child),
+  .withy-wraith-flame > :not(:first-child),
+  .withy-wraith-eyes > :not(:first-child) {
+    visibility: hidden;
+  }
+
+  .withy-wraith-sway > :nth-child(1) {
+    animation: withy-wraith-sway-rest 1.4s step-end infinite;
+  }
+
+  .withy-wraith-sway > :nth-child(2) {
+    animation: withy-wraith-sway-right 1.4s step-end infinite;
+  }
+
+  .withy-wraith-sway > :nth-child(3) {
+    animation: withy-wraith-sway-left 1.4s step-end infinite;
+  }
+
+  .withy-wraith-flame > :nth-child(1) {
+    animation: withy-wraith-flame-steady 0.9s step-end infinite;
+  }
+
+  .withy-wraith-flame > :nth-child(2) {
+    animation: withy-wraith-flame-dim 0.9s step-end infinite;
+  }
+
+  .withy-wraith-flame > :nth-child(3) {
+    animation: withy-wraith-flame-lean 0.9s step-end infinite;
+  }
+
+  .withy-wraith-eyes > :nth-child(1) {
+    animation: withy-wraith-eyes-open 5s step-end infinite;
+  }
+
+  .withy-wraith-eyes > :nth-child(2) {
+    animation: withy-wraith-eyes-shut 5s step-end infinite;
+  }
+
+  .withy-wraith-mote,
+  .withy-wraith-drop,
+  .withy-wraith-ember,
+  .withy-wraith-twinkle {
+    position: absolute;
+    left: calc(var(--withy-wraith-x) * var(--withy-wraith-px));
+    top: calc(var(--withy-wraith-y) * var(--withy-wraith-px));
+    width: var(--withy-wraith-px);
+    height: var(--withy-wraith-px);
+    opacity: 0;
+  }
+
+  .withy-wraith-mote {
+    background: var(--withy-wraith-spark);
+    box-shadow: 0 0 calc(var(--withy-wraith-px) * 2) var(--withy-wraith-spark);
+    animation:
+      withy-wraith-rise var(--withy-wraith-time) steps(var(--withy-wraith-travel))
+        var(--withy-wraith-delay) infinite,
+      withy-wraith-fade var(--withy-wraith-time) linear var(--withy-wraith-delay) infinite;
+  }
+
+  .withy-wraith-mote-alt {
+    --withy-wraith-spark: var(--withy-wraith-spark-alt);
+  }
+
+  .withy-wraith-drop,
+  .withy-wraith-ember {
+    animation:
+      withy-wraith-fall var(--withy-wraith-time) steps(var(--withy-wraith-travel))
+        var(--withy-wraith-delay) infinite,
+      withy-wraith-fade var(--withy-wraith-time) linear var(--withy-wraith-delay) infinite;
+  }
+
+  .withy-wraith-drop {
+    background: var(--withy-wraith-rain);
+    box-shadow:
+      0 calc(var(--withy-wraith-px) * -1)
+        color-mix(in srgb, var(--withy-wraith-rain) 55%, transparent),
+      0 calc(var(--withy-wraith-px) * -2)
+        color-mix(in srgb, var(--withy-wraith-rain) 25%, transparent);
+  }
+
+  .withy-wraith-ember {
+    background: var(--withy-wraith-ember);
+  }
+
+  .withy-wraith-twinkle {
+    background: var(--withy-wraith-spark);
+    animation: withy-wraith-twinkle var(--withy-wraith-time) step-end var(--withy-wraith-delay)
+      infinite;
+  }
+
+  .withy-wraith-twinkle::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    box-shadow:
+      var(--withy-wraith-px) 0 var(--withy-wraith-spark),
+      calc(var(--withy-wraith-px) * -1) 0 var(--withy-wraith-spark),
+      0 var(--withy-wraith-px) var(--withy-wraith-spark),
+      0 calc(var(--withy-wraith-px) * -1) var(--withy-wraith-spark);
+    animation: withy-wraith-twinkle-arms var(--withy-wraith-time) step-end var(--withy-wraith-delay)
+      infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .withy-aura,
+    .withy-aura::before,
+    .withy-aura::after {
+      animation: none;
+    }
+
+    .withy-progress-fill {
+      transition: none;
+    }
+
+    .withy-progress-indeterminate,
+    .withy-progress-stripes,
+    .withy-progress-shimmer::after {
+      animation: none;
+    }
+
+    .withy-progress-indeterminate {
+      transform: translateX(75%);
+    }
+
+    .withy-progress-shimmer::after {
+      content: none;
+    }
+
+    .withy-wraith-aura,
+    .withy-wraith-shadow,
+    .withy-wraith-figure,
+    .withy-wraith-glow,
+    .withy-wraith-sway > :nth-child(n),
+    .withy-wraith-flame > :nth-child(n),
+    .withy-wraith-eyes > :nth-child(n) {
+      animation: none;
+    }
+
+    .withy-wraith-mote,
+    .withy-wraith-drop,
+    .withy-wraith-ember,
+    .withy-wraith-twinkle {
+      display: none;
+    }
+  }
+}

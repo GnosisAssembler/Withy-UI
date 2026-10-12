@@ -1,10 +1,10 @@
 import type { Decorator, Preview } from "@storybook/react-vite";
-import { TooltipProvider } from "../packages/sprig-design-system/src/components/molecules/tooltip";
-import { ToastProvider } from "../packages/sprig-design-system/src/components/molecules/toast";
-import { ThemeProvider } from "../packages/sprig-design-system/src/components/theme/theme-provider";
-import "./sprig.css";
+import { TooltipProvider } from "../packages/withy-ui/src/components/molecules/tooltip";
+import { ToastProvider } from "../packages/withy-ui/src/components/molecules/toast";
+import { ThemeProvider } from "../packages/withy-ui/src/components/theme/theme-provider";
+import "./withy-ui.css";
 
-const withSprig: Decorator = (Story, context) => {
+const withWithyUi: Decorator = (Story, context) => {
   const theme = (context.globals.theme as string | undefined) ?? "light";
   document.documentElement.dataset.theme = theme;
 
@@ -22,13 +22,13 @@ const withSprig: Decorator = (Story, context) => {
 };
 
 const preview: Preview = {
-  decorators: [withSprig],
+  decorators: [withWithyUi],
   initialGlobals: {
     theme: "light",
   },
   globalTypes: {
     theme: {
-      description: "Sprig skin",
+      description: "Withy UI skin",
       toolbar: {
         title: "Skin",
         icon: "paintbrush",

@@ -1,20 +1,15 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import {
-  ThemeProvider,
-  themeBootScript,
-  ToastProvider,
-  TooltipProvider,
-} from "sprig-design-system";
+import { themeBootScript, Wraith } from "withy-ui";
 import { DocsProviders } from "./docs-providers";
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Sprig",
-    template: "%s · Sprig",
+    default: "Withy UI",
+    template: "%s · Withy UI",
   },
-  description: "Sprig is a Radix and Tailwind design system for dashboards, apps, and pages.",
+  description: "Withy UI is a Radix and Tailwind design system for dashboards, apps, and pages.",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -22,13 +17,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en" data-theme="light" suppressHydrationWarning className="h-full">
       <body className="min-h-full font-sans antialiased">
         <script dangerouslySetInnerHTML={{ __html: themeBootScript }} />
-        <ThemeProvider>
-          <DocsProviders>
-            <TooltipProvider>
-              <ToastProvider>{children}</ToastProvider>
-            </TooltipProvider>
-          </DocsProviders>
-        </ThemeProvider>
+        <DocsProviders>{children}</DocsProviders>
+        <Wraith className="fixed right-2 bottom-2 z-30 max-md:[--withy-wraith-px:2px] print:hidden" />
       </body>
     </html>
   );

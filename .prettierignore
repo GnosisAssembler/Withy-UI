@@ -5,5 +5,6 @@ coverage
 storybook-static
 pnpm-lock.yaml
 next-env.d.ts
-packages/sprig-design-system/src/data/usa-states.ts
-packages/sprig-design-system/dist
+packages/withy-ui/src/data/usa-states.ts
+packages/withy-ui/dist
+packages/withy-ui/skills

@@ -15,7 +15,9 @@ const eslintConfig = defineConfig([
   {
     files: ["packages/**/*.{js,jsx,ts,tsx}"],
     rules: {
+      // The published package is not a Next.js app.
       "@next/next/no-html-link-for-pages": "off",
+      "@next/next/no-img-element": "off",
     },
   },
   globalIgnores([
