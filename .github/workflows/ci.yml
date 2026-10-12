@@ -31,10 +31,13 @@ jobs:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: check
     runs-on: ubuntu-latest
+    concurrency:
+      group: release-${{ github.ref }}
+      cancel-in-progress: false
     permissions:
-      contents: write
-      id-token: write
-      pull-requests: write
+      contents: write # version commits, tags, GitHub releases
+      pull-requests: write # the Version Packages PR
+      id-token: write # npm trusted publishing and provenance
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
@@ -42,14 +45,14 @@ jobs:
           version: 10.15.0
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
-          cache: pnpm
+          node-version: 24 # bundles npm 11, which trusted publishing needs
           registry-url: https://registry.npmjs.org
       - run: pnpm install --frozen-lockfile
-      - uses: changesets/action@v1
+      - uses: changesets/action@v2
         with:
-          version: pnpm changeset version
-          publish: pnpm release
+          version-script: pnpm changeset version
+          publish-script: pnpm release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_CONFIG_PROVENANCE: true
+          # "Version Packages" fails commitlint. v2 pushes through the GitHub
+          # API by default; this also covers a git-cli commit.
+          HUSKY: 0
